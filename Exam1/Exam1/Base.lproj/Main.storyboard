@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Exam1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="6" translatesAutoresizingMaskIntoConstraints="NO" id="hOX-3u-dTx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="590"/>
+                                <subviews>
+                                    <imageView multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_photo" translatesAutoresizingMaskIntoConstraints="NO" id="ODm-UY-UsC">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="590"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ODm-UY-UsC" firstAttribute="leading" secondItem="hOX-3u-dTx" secondAttribute="leading" id="2GI-Qy-J0d"/>
+                                    <constraint firstAttribute="height" constant="590" id="3Ny-E4-d7i"/>
+                                    <constraint firstAttribute="trailing" secondItem="ODm-UY-UsC" secondAttribute="trailing" id="Mhb-Yh-Q5P"/>
+                                    <constraint firstItem="ODm-UY-UsC" firstAttribute="centerX" secondItem="hOX-3u-dTx" secondAttribute="centerX" id="Qxl-F8-YpB"/>
+                                    <constraint firstItem="ODm-UY-UsC" firstAttribute="centerY" secondItem="hOX-3u-dTx" secondAttribute="centerY" id="Rhr-mA-IRj"/>
+                                    <constraint firstItem="ODm-UY-UsC" firstAttribute="top" secondItem="hOX-3u-dTx" secondAttribute="top" id="atQ-Rl-Hj0"/>
+                                    <constraint firstAttribute="bottom" secondItem="ODm-UY-UsC" secondAttribute="bottom" id="zRY-Yk-G7e"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="mxb-xd-yel"/>
+                                </connections>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mY7-hY-As2">
+                                <rect key="frame" x="0.0" y="590" width="375" height="77"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fe-8z-NIz">
+                                        <rect key="frame" x="97" y="17" width="180" height="44"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="YDT-t6-2ef"/>
+                                            <constraint firstAttribute="width" constant="180" id="xkU-ZR-jxD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="Pick an Image">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pickImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="smn-r5-3OG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97647058823529409" green="0.87450980392156863" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="Fgr-LV-cPn"/>
+                                    <constraint firstAttribute="height" constant="77" id="ILp-KN-bHk"/>
+                                    <constraint firstItem="4fe-8z-NIz" firstAttribute="centerX" secondItem="mY7-hY-As2" secondAttribute="centerX" id="Of5-Ux-qSI"/>
+                                    <constraint firstItem="4fe-8z-NIz" firstAttribute="top" secondItem="mY7-hY-As2" secondAttribute="top" constant="17" id="Ox1-3K-N1Y"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="mY7-hY-As2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LQK-Jt-iDp"/>
+                            <constraint firstItem="hOX-3u-dTx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dAr-it-iez"/>
+                            <constraint firstItem="hOX-3u-dTx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gz4-UU-TTu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mY7-hY-As2" secondAttribute="bottom" id="kwU-ZL-Sxc"/>
+                            <constraint firstAttribute="trailing" secondItem="hOX-3u-dTx" secondAttribute="trailing" id="z0z-e0-TU4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="ODm-UY-UsC" id="O9A-lS-n5m"/>
+                        <outlet property="myScrollView" destination="hOX-3u-dTx" id="6K5-HM-Rcw"/>
+                        <outlet property="pickImageButton" destination="4fe-8z-NIz" id="R7i-1j-0bo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_photo" width="44" height="44"/>
+    </resources>
+</document>
